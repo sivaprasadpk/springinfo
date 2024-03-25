@@ -1,0 +1,21 @@
+package com.sathya.springboot;
+
+import java.sql.Date;
+
+import org.springframework.stereotype.Component;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+@Component
+@Data
+@AllArgsConstructor
+public class Product 
+{
+	private int proId;
+	private String proName;
+	private double proPrice;
+	private Date createAt;
+	private Date updateAt;
+	private String createBy;
+	private String updateBy;
+}

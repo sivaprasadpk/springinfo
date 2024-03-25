@@ -1,0 +1,11 @@
+package com.sathya.springboot.model;
+
+import lombok.Data;
+
+@Data
+public class ProductDetails {
+
+	private int proId;
+	private String proName;
+	private double proPrice;
+}

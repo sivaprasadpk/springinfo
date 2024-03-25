@@ -1,0 +1,5 @@
+package com.sathya.springboot.mapper;
+
+public class ProductMapper {
+
+}

@@ -1,0 +1,23 @@
+package com.sathya.springboot.mapper;
+
+import java.time.LocalDate;
+
+import org.springframework.stereotype.Component;
+
+import com.sathya.springboot.Product;
+import com.sathya.springboot.model.ProductDetails;
+@Component
+public class ProductMapper 
+{
+	public Product modelToEntityConversion(ProductDetails productDetails)
+	{
+		Product product = new Product();
+		product.setProId(productDetails.getProId());
+		product.setProName(productDetails.getProName());
+		product.setProPrice(productDetails.getProPrice());
+		product.setUpdateAt(System.getProperty("user.name"));
+		product.setCreateAt(LocalDate.now());
+		
+		return product;
+	}
+}

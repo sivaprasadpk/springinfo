@@ -1,0 +1,29 @@
+package com.sathya.springboot;
+
+import java.sql.Date;
+import java.time.LocalDate;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.stereotype.Component;
+
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Component
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Product 
+{
+	@Id
+	private int proId;
+	private String proName;
+	private double proPrice;
+	@CreatedDate
+	private LocalDate createAt;
+	@CreatedDate
+	private LocalDate updateAt;
+	private String createBy;
+	private String updateBy;
+}

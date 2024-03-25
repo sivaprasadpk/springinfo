@@ -1,0 +1,9 @@
+package com.sathya.springboot.mainclass;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ProductClient 
+{
+	@Autowired
+	
+}

@@ -1,0 +1,37 @@
+package com.sathya.springboot.mainclass;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+
+import com.sathya.springboot.Product;
+import com.sathya.springboot.mapper.ProductMapper;
+import com.sathya.springboot.model.ProductDetails;
+import com.sathya.springboot.respository.ProductRespository;
+
+public class ProductClient implements CommandLineRunner
+{
+	@Autowired
+	ProductRespository productRespository;
+	
+	@Autowired
+	ProductMapper productMapper;
+
+	@Override
+	public void run(String... args) throws Exception {
+		//model class data: having the values
+		
+		ProductDetails productDetails = new ProductDetails();
+		productDetails.setProId(1);
+		productDetails.setProName("chitapandu");
+		productDetails.setProPrice(220);
+		
+		//conversion of model class data to entity
+		Product product = productMapper.modelToEntityConversion(productDetails);
+		
+		productRespository.save(product)
+		
+		
+	}
+	
+	
+}

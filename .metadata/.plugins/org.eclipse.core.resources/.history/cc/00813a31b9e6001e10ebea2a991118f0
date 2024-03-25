@@ -1,0 +1,13 @@
+package com.sathya.springboot.mapper;
+
+import com.sathya.springboot.Product;
+import com.sathya.springboot.model.ProductDetails;
+
+public class ProductMapper 
+{
+	public Product modelToEntityConversion(ProductDetails productDetails)
+	{
+		Product product = new Product();
+		product.
+	}
+}
